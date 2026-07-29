@@ -1,12 +1,12 @@
 {
   "name": "montage",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Ingest videos into Montage and turn them into editable moments, via the Montage MCP server.",
   "author": {
-    "name": "Ukumi",
-    "url": "https://ukumi.ai"
+    "name": "Montage",
+    "url": "https://montage.app"
   },
-  "homepage": "https://ukumi.ai",
+  "homepage": "https://montage.app",
   "repository": "https://github.com/ukumi-ai/montage-plugin",
   "license": "MIT",
   "keywords": [
@@ -22,13 +22,13 @@
     "displayName": "Montage",
     "shortDescription": "Ingest videos and cut them into shareable moments",
     "longDescription": "Ingest a video into Montage from a Google Drive or public URL, follow the pipeline through transcription and analysis, then pick segments and create editable moments with a link back to the Montage editor.",
-    "developerName": "Ukumi",
+    "developerName": "Montage",
     "category": "Productivity",
     "capabilities": [
       "Read",
       "Write"
     ],
-    "websiteURL": "https://ukumi.ai",
+    "websiteURL": "https://montage.app",
     "defaultPrompt": [
       "Ingest this video into Montage and tell me when it is ready.",
       "Find the best 60 seconds of this video and make a moment from it."
