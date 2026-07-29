@@ -1,13 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "montage",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Ingest videos into Montage and turn them into editable moments, via the Montage MCP server.",
   "author": {
-    "name": "Ukumi",
-    "url": "https://ukumi.ai"
+    "name": "Montage",
+    "url": "https://montage.app"
   },
-  "homepage": "https://ukumi.ai",
+  "homepage": "https://montage.app",
   "repository": "https://github.com/ukumi-ai/montage-plugin",
   "license": "MIT",
   "keywords": [
