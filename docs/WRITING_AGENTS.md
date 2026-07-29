@@ -63,7 +63,7 @@ Anything the agent needs to look up rather than remember goes in a `references/`
 
 Ingestion is a skill: it polls and narrates, and the user reacts to each step. Clip scouting is an agent: it reads a lot, returns a short list, and three of them can run at once.
 
-Skills live in [`ukumi-ai/montage-skills`](https://github.com/ukumi-ai/montage-skills). Agents live here.
+Both live in this repo — skills under `skills/`, agents under `agents/`. [`ukumi-ai/montage-skills`](https://github.com/ukumi-ai/montage-skills) holds a separate copy of `skills/` for `npx skills add` users; if you change a skill and both audiences should see it, commit it in both repos.
 
 ## Before you open the PR
 
