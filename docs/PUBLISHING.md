@@ -2,7 +2,9 @@
 
 Two hosts, two very different bars. Claude Code needs nothing but a public repo. ChatGPT/Codex needs a registered connector and a review.
 
-This repo (`ukumi-ai/montage-plugin`) is the distribution front door. The skills themselves live in [`ukumi-ai/montage-skills`](https://github.com/ukumi-ai/montage-skills), which stays a plain skills repo — `npx skills add ukumi-ai/montage-skills` keeps working and is not affected by anything here.
+This repo (`ukumi-ai/montage-plugin`) is the whole plugin: manifests, `skills/`, `agents/`, and `.mcp.json`. [`ukumi-ai/montage-skills`](https://github.com/ukumi-ai/montage-skills) stays a plain skills collection for `npx skills add ukumi-ai/montage-skills` and carries no plugin files.
+
+A plugin manifest has to sit in the same repo as the skills it ships, so the two repos each hold their own copy of `skills/` and **nothing syncs them**. A skill change that should reach both audiences needs a commit in each. Nothing enforces that today.
 
 ## Claude Code — live as soon as the marketplace manifest is on `main`
 
