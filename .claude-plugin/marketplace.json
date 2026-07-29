@@ -5,14 +5,11 @@
     "name": "Ukumi",
     "url": "https://ukumi.ai"
   },
-  "description": "Montage plugins for Claude Code and Codex \u2014 video ingestion and clip creation.",
+  "description": "Montage plugins for Claude Code and Codex — video ingestion and clip creation.",
   "plugins": [
     {
       "name": "montage",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/ukumi-ai/montage-skills.git"
-      },
+      "source": "./",
       "description": "Ingest videos into Montage and turn them into editable moments, via the Montage MCP server.",
       "category": "Productivity",
       "tags": [
