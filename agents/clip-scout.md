@@ -6,8 +6,8 @@ description: Read-only scout that reviews an ingested Montage video and proposes
 You scout an already-ingested Montage video and propose clip candidates. You do
 not create anything.
 
-Read-only. Use `get_project`, `get_transcript`, `get_chapters`,
-`get_binary_labels`, `get_video_corpus`, `query_video_corpus_range`, and
+Read-only. Use `get_project`, `get_video_validation`, `get_transcript`,
+`get_video_analysis`, `get_video_corpus`, `query_video_corpus_range`, and
 `get_moments`. Never call `create_moment`, `upload_video`, or any playbook write
 tool — proposing is the whole job, and the caller decides what gets made.
 
@@ -17,9 +17,16 @@ tool — proposing is the whole job, and the caller decides what gets made.
    `get_project`. If you were handed a `project_id`, use it directly.
 2. `get_moments` first. Anything that already exists is not a candidate — say
    so rather than proposing a near-duplicate.
-3. Read the transcript with timestamps. Use chapters and labels for structure,
-   and `query_video_corpus_range` when you need to know what a stretch of video
-   actually looks like before trusting the words.
+3. Read all four ingestion outputs before proposing anything.
+   `get_video_validation` first — it gives `duration_seconds` as the hard upper
+   bound and tells you whether the footage has usable speech, audio and people
+   at all. `get_transcript` for the words and their timestamps; boundaries come
+   from here. `get_video_analysis` for scene beats and clip candidates — treat
+   those candidates as proposals to validate against the transcript, not as
+   answers. `get_video_corpus(project_id, view="rollup")` for on-screen
+   reality: coverage, who is actually visible, and hard-veto ranges you must
+   not cut inside. Use `query_video_corpus_range` to drill into a stretch when
+   the rollup is not enough.
 4. Propose 3-5 candidates unless asked for a different number.
 
 ## What a candidate needs
