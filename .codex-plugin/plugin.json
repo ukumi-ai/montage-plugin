@@ -1,6 +1,6 @@
 {
   "name": "montage",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Ingest videos into Montage and turn them into editable moments, via the Montage MCP server.",
   "author": {
     "name": "Montage",
@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "Montage",
     "shortDescription": "Ingest videos and cut them into shareable moments",
-    "longDescription": "Ingest a video into Montage from a Google Drive or public URL, follow the pipeline through transcription and analysis, then pick segments and create editable moments with a link back to the Montage editor.",
+    "longDescription": "Ingest a video into Montage from a Google Drive or Dropbox link, follow the pipeline through transcription and analysis, then pick segments and create editable moments with a link back to the Montage editor.",
     "developerName": "Montage",
     "category": "Productivity",
     "capabilities": [
