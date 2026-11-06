@@ -29,7 +29,7 @@ Both hosts read the same `.claude-plugin/marketplace.json`.
 
 | Component | Name |
 |---|---|
-| Skill | `ingest-video` — pull a video in from Google Drive or a public URL and follow the pipeline |
+| Skill | `ingest-video` — pull a video in from a Google Drive or Dropbox link and follow the pipeline |
 | Skill | `create-moment` — turn a segment into an editable moment with an editor link |
 | Agent | `clip-scout` — read-only scout that proposes clip segments |
 | MCP server | `montage` → `https://mcp.montage.app/mcp` |

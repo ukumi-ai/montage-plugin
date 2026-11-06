@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "montage",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Ingest videos into Montage and turn them into editable moments, via the Montage MCP server.",
   "author": {
     "name": "Montage",
