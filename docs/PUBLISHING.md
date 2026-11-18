@@ -4,7 +4,7 @@ Two hosts, two very different bars. Claude Code needs nothing but a public repo.
 
 This repo (`ukumi-ai/montage-plugin`) is the whole plugin: manifests, `skills/`, `agents/`, and `.mcp.json`. [`ukumi-ai/montage-skills`](https://github.com/ukumi-ai/montage-skills) stays a plain skills collection for `npx skills add ukumi-ai/montage-skills` and carries no plugin files.
 
-A plugin manifest has to sit in the same repo as the skills it ships, so the two repos each hold their own copy of `skills/` and **nothing syncs them**. A skill change that should reach both audiences needs a commit in each. Nothing enforces that today.
+A plugin manifest has to sit in the same repo as the skills it ships, so the two repos each hold their own copy of `skills/` and the files are copied byte for byte from the MCP server’s canonical skills. A skill change needs a commit in each distribution. The private source repository’s dedicated skill-sync CI checks both public copies without giving either public repo credentials to the private source.
 
 ## Claude Code — live as soon as the marketplace manifest is on `main`
 

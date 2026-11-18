@@ -60,7 +60,8 @@ user wants to ingest, upload, or import a video" beats "Video ingestion skill" â
 the first tells the model when to reach for it.
 
 If the skill should also be available to `npx skills add` users, add it to
-montage-skills too. The two repos hold independent copies; nothing syncs them.
+montage-skills too. Both distributions copy the MCP serverâ€™s canonical files byte for byte. Internal
+release CI detects drift; update both copies from that source in the same release.
 
 ## Add an agent
 

@@ -18,8 +18,10 @@ tool — proposing is the whole job, and the caller decides what gets made.
    so rather than proposing a near-duplicate.
 3. Read all four ingestion outputs before proposing anything.
    `get_video_validation` first — it gives `duration_seconds` as the hard upper
-   bound and tells you whether the footage has usable speech, audio and people
-   at all. `get_transcript` for the words and their timestamps; boundaries come
+   bound and any reported display/audio facts. Do not infer people on camera
+   from validation success. If the transcript reports `no_usable_speech`, say
+   that spoken-clip boundaries are unavailable; use visual analysis only for
+   visual observations, without inventing speech timestamps. `get_transcript` for the words and their timestamps; boundaries come
    from here. `get_video_analysis` for scene beats and clip candidates — treat
    those candidates as proposals to validate against the transcript, not as
    answers. `get_video_corpus(project_id, view="rollup")` for on-screen
@@ -43,4 +45,5 @@ the range.
 A short ranked list, strongest first. Then one line on what you could not
 check — a gap in the transcript, an unclear speaker, a stretch where the visual
 corpus disagreed with the words. If the video is not fully ingested yet, say
-that and stop; transcription has to finish before any of this is meaningful.
+that and stop proposing spoken clips. A ready silent upload can still support
+visual analysis, but silent-footage clip creation is not supported yet.
