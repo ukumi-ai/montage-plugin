@@ -1,8 +1,8 @@
 # montage-plugin
 
-The **Montage** plugin for Claude Code and ChatGPT / Codex. Ingest a video, get
-a transcript and chapters, and cut editable moments — driven by the Montage MCP
-server.
+The **Montage** plugin for Claude Code and ChatGPT / Codex. Import recordings
+into Montage, create editable moments, or use transcripts and visual analysis
+for evidence-backed writing and research in the assistant.
 
 ## Install
 
@@ -31,6 +31,7 @@ Both hosts read the same `.claude-plugin/marketplace.json`.
 |---|---|
 | Skill | `ingest-video` — pull a video in from a Google Drive or Dropbox link and follow the pipeline |
 | Skill | `create-moment` — turn a segment into an editable moment with an editor link |
+| Skill | `repurpose-recordings` — write summaries, posts, and case studies or research across recordings with timestamped evidence |
 | Agent | `clip-scout` — read-only scout that proposes clip segments |
 | MCP server | `montage` → `https://mcp.montage.app/mcp` |
 
@@ -44,9 +45,9 @@ registration, so the host prompts you to sign in on the first tool call.
 | **montage-plugin** (this one) | the plugin: manifests, `skills/`, `agents/`, `.mcp.json` | Claude Code and Codex plugin installs |
 | [montage-skills](https://github.com/ukumi-ai/montage-skills) | the plain skills collection | `npx skills add ukumi-ai/montage-skills` |
 
-The skill files exist in both repos and **nothing syncs them**. A skill change
-that should reach both audiences needs a commit in each. Plugin structure —
-manifests, agents, MCP config — belongs here only.
+Both repositories carry byte-for-byte copies of the canonical Montage MCP
+skills. Updates require a commit in each repository. Plugin manifests, agents,
+and MCP config belong here.
 
 ## Contributing
 

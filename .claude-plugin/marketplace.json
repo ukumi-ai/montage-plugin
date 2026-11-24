@@ -5,12 +5,12 @@
     "name": "Montage",
     "url": "https://montage.app"
   },
-  "description": "Montage plugins for Claude Code and Codex — video ingestion and clip creation.",
+  "description": "Montage for Claude Code and Codex: recording import, clip creation, and evidence-backed writing and research.",
   "plugins": [
     {
       "name": "montage",
       "source": "./",
-      "description": "Ingest videos into Montage and turn them into editable moments, via the Montage MCP server.",
+      "description": "Import recordings, create editable moments, and use recordings for summaries, posts, and research through Montage MCP.",
       "category": "Productivity",
       "tags": [
         "video",

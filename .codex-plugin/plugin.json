@@ -1,7 +1,7 @@
 {
   "name": "montage",
-  "version": "0.3.0",
-  "description": "Ingest videos into Montage and turn them into editable moments, via the Montage MCP server.",
+  "version": "0.4.0",
+  "description": "Import recordings, create editable moments, and use recordings for summaries, posts, and research through Montage MCP.",
   "author": {
     "name": "Montage",
     "url": "https://montage.app"
@@ -20,8 +20,8 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Montage",
-    "shortDescription": "Ingest videos and cut them into shareable moments",
-    "longDescription": "Ingest a video into Montage from a Google Drive or Dropbox link, follow the pipeline through transcription and analysis, then pick segments and create editable moments with a link back to the Montage editor.",
+    "shortDescription": "Import, clip, and summarize recordings",
+    "longDescription": "Import a recording from Google Drive or Dropbox, follow its processing progress, create editable moments with links to the Montage editor, or use transcripts and visual analysis for evidence-backed writing and research in the assistant.",
     "developerName": "Montage",
     "category": "Productivity",
     "capabilities": [
